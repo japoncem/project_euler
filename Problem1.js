@@ -6,16 +6,10 @@ If we list all the natural numbers below 10 that are multiples of 3 or 5, we get
 
 Find the sum of all the multiples of 3 or 5 below 1000.*/
 
+tools = require("./Tools")
+
 Number.prototype.divides= function(n){
     return (n % this) === 0;
-}
-
-function sumArray(arr){
-    var r = 0;
-    for(i in arr){
-	r += arr[i];
-    }
-    return r;
 }
 
 var LIMIT = 1000;
@@ -31,4 +25,4 @@ function loadMultiples(){
 }
 
 loadMultiples();
-console.log("The sum of the multiples is " + sumArray(multiples));
+console.log("The sum of the multiples is " + tools.sumArray(multiples));
